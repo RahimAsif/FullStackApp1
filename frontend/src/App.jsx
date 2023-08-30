@@ -35,7 +35,7 @@ function App() {
     const fetchData = async () => {
       // Make the request
       const result = await axios(
-        `http://localhost:3001/${resourceType}`,
+        `https://simple-full-stack-app.onrender.com/${resourceType}`,
       );
       console.log(result);
       // Update the items  
