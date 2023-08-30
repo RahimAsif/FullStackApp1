@@ -27,6 +27,16 @@ app.get("/comments", (req, res) => {
   let comments = [
     { id: 1, userid: 2, comment: "You did a great job" },
     { id: 2, userid: 1, comment: "Next time try harder - OK!" },
+    {
+      id: 3,
+      userid: 1,
+      comment: "The quick brown fox jumped over the lazy dog!",
+    },
+    {
+      id: 4,
+      userid: 1,
+      comment: "And we all wondered why it did such a stupid thing",
+    },
   ];
   res.status(200).send(comments);
 });
