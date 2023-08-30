@@ -11,12 +11,33 @@ function App() {
     setResourceType(param);
   }
 
+  // Method for handling delete functionality
+  const handleDelete = (itemID) => {  
+    // Clone the array
+    let newArray = items.map(item => item);    
+    // Determine the index to be deleted
+    let deleteIndex = -1;
+    for(let i=0; i<newArray.length; i++) {
+      let item = newArray[i];
+      if(item.id == itemID) {
+        deleteIndex = i;
+      }
+    }
+    // Remove the deleted item
+    let deletedArray = newArray.splice(deleteIndex, 1);
+    // Display the deleted item
+    console.log(...deletedArray);
+    // Update the master items array
+    setItems(newArray);    
+  }
+
   useEffect(()=> {
     const fetchData = async () => {
       // Make the request
       const result = await axios(
-        `https://jsonplaceholder.org/${resourceType}`,
+        `http://localhost:3001/${resourceType}`,
       );
+      console.log(result.data);
       // Update the items  
       setItems(result.data);      
     };
