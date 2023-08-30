@@ -19,6 +19,6 @@ dist-ssr
 .DS_Store
 *.suo
 *.ntvs*
-*.njsproj
+*.njsprojhttps://github.com/RahimAsif/FullStackApp1/tree/main/frontend
 *.sln
 *.sw?
