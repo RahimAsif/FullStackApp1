@@ -1,11 +1,13 @@
 // Dependencies
 const express = require("express");
+const cors = require("cors");
 const app = express();
 require("dotenv").config();
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 // Home page
 app.get("/", (req, res) => {
