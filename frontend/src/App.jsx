@@ -37,7 +37,7 @@ function App() {
       const result = await axios(
         `http://localhost:3001/${resourceType}`,
       );
-      console.log(result.data);
+      console.log(result);
       // Update the items  
       setItems(result.data);      
     };
